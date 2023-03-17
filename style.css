@@ -22,6 +22,10 @@ body {
 }
 
 .brush-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
     margin-top: 30px;
     width: 100%;
     text-align: center;
@@ -33,7 +37,4 @@ body {
     gap: 20px;
 }
 
-.eraser-container {
-    margin-top: 10px;
-}
 
