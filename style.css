@@ -12,8 +12,12 @@ body {
     align-items: center;
 }
 
-.toggle-container {
+.clear-grid-container {
     padding: 20px;
+}
+
+.clear-grid-container button {
+    padding: 5px;
 }
 
 .canvas-container {
@@ -24,7 +28,6 @@ body {
     grid-template-columns: repeat(var(--grid-rows), auto);
     grid-template-rows: repeat(var(--grid-cols), auto);
 }
-
 
 .canvas-size {
     padding: 20px;
