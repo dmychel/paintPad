@@ -10,6 +10,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgba(1, 24, 75, 0.904);
 }
 
 .clear-grid-container {
@@ -23,7 +24,16 @@ body {
 .canvas-container {
     height: 350px;
     width: 350px;
-    border: 2px solid;
+    border: 1.5px solid green;
+    box-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 40px rgb(132, 0, 255),
+      0 0 10px rgb(132, 0, 255),
+      0 0 10px rgb(132, 0, 255),
+      0 0 10px rgb(132, 0, 255),
+      0 0 10px rgb(73, 1, 141);
     display: grid;
     grid-template-columns: repeat(var(--grid-rows), auto);
     grid-template-rows: repeat(var(--grid-cols), auto);
@@ -54,6 +64,7 @@ body {
     border: 1px solid;
     height: auto;
     width: auto;
+    background-color: #fff;
 }
 
 #black:hover {
