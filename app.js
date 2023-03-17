@@ -1,3 +1,4 @@
+// Brushes
 const blackBrush = document.getElementById('black');
 const tealBrush = document.getElementById('teal');
 const greenBrush = document.getElementById('green');
@@ -5,9 +6,28 @@ const pinkBrush = document.getElementById('pink');
 const rainbowBrush = document.getElementById('rainbow');
 const eraser = document.getElementById('eraser');
 
+// DOM elements 
+let canvas = document.getElementById('canvas');
+
 
 // make grid function
-function makeGrid(){}
+function makeGrid(value){
+    // let gridSqaure = canvas.querySelectorAll('div');
+    // gridSqaure.forEach((div) => div.remove());
+    canvas.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
+    canvas.style.gridTemplateRows = `repeat(${value}), 1fr`
+
+    let valueSquare = value * value;
+    
+    for(let i = 0; i < valueSquare; i++){
+        grid = document.createElement('div');
+        grid.id = 'newGrid';
+        canvas.appendChild(grid)
+    }
+}
+
+makeGrid(16)
+
 // paint function
 blackBrush.addEventListener('click', () =>{});
 
@@ -19,9 +39,10 @@ pinkBrush.addEventListener('click', () => {});
 
 rainbowBrush.addEventListener('click', () =>{});
 
-eraser.addEventListener('click', () =>{})
+eraser.addEventListener('click', () =>{});
 
 
 // clear function
+function clearGrid(){};
 
 
