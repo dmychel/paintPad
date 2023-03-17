@@ -38,7 +38,8 @@ userChoice.addEventListener('keypress', (e) => {
 
 function populate(value){
     if((value < 1) ||
-        (value > 50)){
+        (value > 50) ||
+        ( !typeof value)){
             alert('choose a number between 1 - 50 so your pc doesnt explode')
             return
         }
