@@ -29,7 +29,21 @@ function makeGrid(value){
 makeGrid(16)
 
 // paint function
-blackBrush.addEventListener('click', () =>{});
+
+function paint(color){
+    console.log(color)
+    const colorGrid = document.querySelectorAll('#newGrid');
+    colorGrid.forEach(div => {
+        div.addEventListener('click', () => {
+            div.style.backgroundColor = color;
+        })
+    })
+}
+
+blackBrush.addEventListener('click', () => {
+    paint('black')
+})
+  
 
 tealBrush.addEventListener('click', () =>{});
 
