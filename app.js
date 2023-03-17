@@ -45,15 +45,23 @@ blackBrush.addEventListener('click', () => {
 })
   
 
-tealBrush.addEventListener('click', () =>{});
+tealBrush.addEventListener('click', () =>{
+    paint('teal')
+});
 
-greenBrush.addEventListener('click', () =>{});
+greenBrush.addEventListener('click', () =>{
+    paint('green')
+});
 
-pinkBrush.addEventListener('click', () => {});
+pinkBrush.addEventListener('click', () => {
+    paint('pink')
+});
 
 rainbowBrush.addEventListener('click', () =>{});
 
-eraser.addEventListener('click', () =>{});
+eraser.addEventListener('click', () =>{
+    paint('white')
+});
 
 
 // clear function
