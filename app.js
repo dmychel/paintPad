@@ -6,6 +6,7 @@ const rainbowBrush = document.getElementById('rainbow');
 const eraser = document.getElementById('eraser');
 const canvas = document.getElementById('canvas');
 const userChoice = document.getElementById('userInput');
+const clearGridButton = document.getElementById('clear');
 
 
 
@@ -75,6 +76,13 @@ function getRandomColor(){
     paint(randomColor)
 }
 
+clearGridButton.addEventListener('click', () => {
+    const colorGrid = document.querySelectorAll('#newGrid');
+    colorGrid.forEach(div => {
+        div.style.backgroundColor = 'white'
+    })
+})
+
 blackBrush.addEventListener('click', () => {
     paint('black')
 })
@@ -101,6 +109,4 @@ eraser.addEventListener('click', () =>{
 });
 
 
-// clear function
-function clearGrid(){};
 
