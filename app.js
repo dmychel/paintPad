@@ -30,12 +30,18 @@ function makeGrid(value){
 makeGrid(16)
 
 userChoice.addEventListener('keypress', (e) => {
+    let value = userChoice.value;
     if(e.key === 'Enter'){
-        populate()
+        populate(value)
     }
 })
 
-function populate(){
+function populate(value){
+    if((value < 1) ||
+        (value > 50)){
+            alert('choose a number between 1 - 50 so your pc doesnt explode')
+            return
+        }
     makeGrid(userChoice.value)
     console.log(userChoice.value)
 }
