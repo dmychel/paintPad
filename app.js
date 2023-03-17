@@ -1,4 +1,3 @@
-// Brushes
 const blackBrush = document.getElementById('black');
 const tealBrush = document.getElementById('teal');
 const greenBrush = document.getElementById('green');
@@ -6,14 +5,16 @@ const pinkBrush = document.getElementById('pink');
 const rainbowBrush = document.getElementById('rainbow');
 const eraser = document.getElementById('eraser');
 
+const userChoice = document.getElementById('userInput');
+
 // DOM elements 
 let canvas = document.getElementById('canvas');
 
 
 // make grid function
 function makeGrid(value){
-    // let gridSqaure = canvas.querySelectorAll('div');
-    // gridSqaure.forEach((div) => div.remove());
+    let gridSqaure = canvas.querySelectorAll('div');
+    gridSqaure.forEach((div) => div.remove());
     canvas.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
     canvas.style.gridTemplateRows = `repeat(${value}), 1fr`
 
@@ -27,6 +28,17 @@ function makeGrid(value){
 }
 
 makeGrid(16)
+
+userChoice.addEventListener('keypress', (e) => {
+    if(e.key === 'Enter'){
+        populate()
+    }
+})
+
+function populate(){
+    makeGrid(userChoice.value)
+    console.log(userChoice.value)
+}
 
 // paint function
 
