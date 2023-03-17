@@ -12,6 +12,10 @@ body {
     align-items: center;
 }
 
+.toggle-container {
+    padding: 20px;
+}
+
 .canvas-container {
     height: 350px;
     width: 350px;
@@ -80,8 +84,13 @@ body {
     background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
 }
 
-#erasor:hover {
+#eraser:hover {
     transition-timing-function: ease-in;
     transition: 0.2s;
-    background-color: grey;
+    background-color: rgb(88, 88, 88);
+}
+
+#toggle {
+    padding: 5px;
+    background-color:rgb(88, 88, 88)
 }

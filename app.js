@@ -4,11 +4,10 @@ const greenBrush = document.getElementById('green');
 const pinkBrush = document.getElementById('pink');
 const rainbowBrush = document.getElementById('rainbow');
 const eraser = document.getElementById('eraser');
-
+const canvas = document.getElementById('canvas');
 const userChoice = document.getElementById('userInput');
 
-// DOM elements 
-let canvas = document.getElementById('canvas');
+
 
 
 // make grid function
@@ -52,11 +51,28 @@ function populate(value){
 function paint(color){
     console.log(color)
     const colorGrid = document.querySelectorAll('#newGrid');
-    colorGrid.forEach(div => {
-        div.addEventListener('click', () => {
-            div.style.backgroundColor = color;
+    if(color === 'rainbow'){
+        colorGrid.forEach(div => {
+            div.addEventListener('click', () => {
+                div.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
+            })
         })
-    })
+    }
+    else {
+        colorGrid.forEach(div => {
+            div.addEventListener('click', () => {
+                div.style.backgroundColor = color;
+            })
+        })
+     }
+    }
+
+function getRandomColor(){
+    console.log('rainbow selected')
+    let colors = 
+    ['red', 'orange', 'yellow', 'green','blue', 'indigo', 'violet']
+    let randomColor = colors[Math.floor(Math.random() *  7)]
+    paint(randomColor)
 }
 
 blackBrush.addEventListener('click', () => {
@@ -76,7 +92,9 @@ pinkBrush.addEventListener('click', () => {
     paint('pink')
 });
 
-rainbowBrush.addEventListener('click', () =>{});
+rainbowBrush.addEventListener('click', () =>{
+    paint('rainbow')
+});
 
 eraser.addEventListener('click', () =>{
     paint('white')
@@ -85,5 +103,4 @@ eraser.addEventListener('click', () =>{
 
 // clear function
 function clearGrid(){};
-
 
