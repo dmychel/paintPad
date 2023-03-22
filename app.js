@@ -54,14 +54,14 @@ function paint(color){
     const colorGrid = document.querySelectorAll('#newGrid');
     if(color === 'rainbow'){
         colorGrid.forEach(div => {
-            div.addEventListener('click', () => {
+            div.addEventListener('mouseover', () => {
                 div.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
             })
         })
     }
     else {
         colorGrid.forEach(div => {
-            div.addEventListener('click', () => {
+            div.addEventListener('mouseover', () => {
                 div.style.backgroundColor = color;
             })
         })
