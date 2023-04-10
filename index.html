@@ -9,6 +9,11 @@
     <title>Paint Pad</title>
 </head>
 <body>
+    <div class="header">
+        <div class="title">
+           <h1>Paint Pad</h1>
+        </div>
+    </div>
     <div class="clear-grid-container">
         <button id="clear">Clear Grid</button>
     </div>
@@ -17,12 +22,19 @@
         <input type="number" id="userInput">
     </div>
     <div class="brush-buttons">
-        <button id="black">Black</button>
-        <button id="teal">Teal</button>
-        <button id="green">Green</button>
-        <button id="pink">Pink</button>
-        <button id="rainbow">Rainbow</button>
-        <button id="eraser">Eraser</button>
+        <input type="color" id="colorPicker" value="#008000" class="color-picker">
+        <button id="black" class="color black">Black</button>
+        <button id="teal" class="color teal">Teal</button>
+        <button id="rainbow" class="rainbow">Rainbow</button>
+        <button id="eraser" class="color">Eraser</button>
+    </div>
+    <div class="footer">
+        <div class="footer-images">
+            <a href="https://www.linkedin.com/in/dylon-crowley-perez-248b0823b/" target="_blank"><img src="images/linkedin.png" alt="LinkediN"></a>
+            <a href="https://github.com/dmychel" target="_blank"><img src="images/github.png" alt="Github"></a>
+            <a href="https://dmychel.github.io/portfolio/" target="_blank"><img src="images/portfolio.png" alt="Portfolio"></a>
+        </div>
+        <p>© Copyright 2023, Dylon Crowley-Perez</p>
     </div>
 </body>
 </html>
