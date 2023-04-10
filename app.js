@@ -7,6 +7,9 @@ const eraser = document.getElementById('eraser');
 const canvas = document.getElementById('canvas');
 const userChoice = document.getElementById('userInput');
 const clearGridButton = document.getElementById('clear');
+const colorPicker = document.getElementById('colorPicker');
+
+console.log(colorPicker.value)
 
 
 
@@ -54,14 +57,14 @@ function paint(color){
     const colorGrid = document.querySelectorAll('#newGrid');
     if(color === 'rainbow'){
         colorGrid.forEach(div => {
-            div.addEventListener('click', () => {
+            div.addEventListener('mouseover', () => {
                 div.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
             })
         })
     }
     else {
         colorGrid.forEach(div => {
-            div.addEventListener('click', () => {
+            div.addEventListener('mouseover', () => {
                 div.style.backgroundColor = color;
             })
         })
@@ -92,13 +95,6 @@ tealBrush.addEventListener('click', () =>{
     paint('teal')
 });
 
-greenBrush.addEventListener('click', () =>{
-    paint('green')
-});
-
-pinkBrush.addEventListener('click', () => {
-    paint('pink')
-});
 
 rainbowBrush.addEventListener('click', () =>{
     paint('rainbow')
