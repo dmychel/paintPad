@@ -5,12 +5,11 @@
 
 body {
     height: 100%;
-    width: 100%;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #189AB4;
+    background-color: #189AB4; */
 }
 
 .header {
@@ -22,11 +21,18 @@ body {
 
 .clear-grid-container {
     margin: 5px 0 10px 0;
+    display: flex;
+    justify-content: center;
   
 }
 
 .clear-grid-container button {
     padding: 5px;
+}
+
+.canvas-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
 .canvas-container {
@@ -41,6 +47,8 @@ body {
 
 .canvas-size {
     padding: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .brush-buttons {
@@ -98,10 +106,7 @@ button {
     flex-direction: column;
     align-items: center;
     position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
-    margin-top: 10px;
 }
 
 .footer p {
