@@ -4,17 +4,25 @@
 }
 
 body {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(1, 24, 75, 0.904);
+    background-color: #189AB4;
+}
+
+.header {
+    width: 100%;
+    background-color: #05445E;
+    text-align: center;
+    padding: 10px;
 }
 
 .clear-grid-container {
-    padding: 20px;
+    margin: 5px 0 10px 0;
+  
 }
 
 .clear-grid-container button {
@@ -24,19 +32,11 @@ body {
 .canvas-container {
     height: 350px;
     width: 350px;
-    border: 1.5px solid green;
-    box-shadow:
-      0 0 5px #fff,
-      0 0 10px #fff,
-      0 0 20px #fff,
-      0 0 40px rgb(132, 0, 255),
-      0 0 10px rgb(132, 0, 255),
-      0 0 10px rgb(132, 0, 255),
-      0 0 10px rgb(132, 0, 255),
-      0 0 10px rgb(73, 1, 141);
     display: grid;
     grid-template-columns: repeat(var(--grid-rows), auto);
     grid-template-rows: repeat(var(--grid-cols), auto);
+    border-radius: 2px;
+    border: 2px solid #05445E;
 }
 
 .canvas-size {
@@ -52,13 +52,75 @@ body {
     text-align: center;
 }
 
-.brush-buttons button {
-    width: 80px;
-    height: 55px;
-    gap: 20px;
-    border-radius: 3px;
+button {
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: #05445E;
+    color: white;
 }
 
+.brush-buttons button {
+    width: 80px;
+    height: 40px;
+    gap: 20px;
+    border-radius: 5px;
+}
+
+.black:hover {
+    transition-timing-function: ease-in;
+    transition: 0.2s;
+    background-color: black;
+    color: white;
+}
+
+.teal:hover {
+    transition-timing-function: ease-in;
+    transition: 0.2s;
+    background-color: teal;
+    color: white;
+}
+
+.eraser:hover {
+    transition-timing-function: ease-in;
+    transition: 0.2s;
+    background-color: white;
+    color: black;
+}
+.rainbow:hover {
+    transition-timing-function: ease-in;
+    transition: 0.2s;
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+
+.footer {
+    background-color: #05445E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.footer p {
+    font-size: 10px;
+    padding: 5px;
+}
+
+.footer-images {
+    width: 100%;
+    margin: 10px 0 5px 0;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.footer-images img {
+    height: 30px;
+    width: 30px;
+}
 
 #newGrid {
     border: 1px solid;
@@ -67,44 +129,4 @@ body {
     background-color: #fff;
 }
 
-#black:hover {
-    transition-timing-function: ease-in;
-    transition: 0.2s;
-    background-color: black;
-    color: white;
-}
 
-#teal:hover {
-    transition-timing-function: ease-in;
-    transition: 0.2s;
-    background-color: teal;
-}
-
-#green:hover {
-    transition-timing-function: ease-in;
-    transition: 0.2s;
-    background-color: green;
-}
-
-#pink:hover {
-    transition-timing-function: ease-in;
-    transition: 0.2s;
-    background-color: pink;
-}
-
-#rainbow:hover {
-    transition-timing-function: ease-in;
-    transition: 0.2s;
-    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-}
-
-#eraser:hover {
-    transition-timing-function: ease-in;
-    transition: 0.2s;
-    background-color: rgb(88, 88, 88);
-}
-
-#toggle {
-    padding: 5px;
-    background-color:rgb(88, 88, 88)
-}
